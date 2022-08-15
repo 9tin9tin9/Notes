@@ -1,4 +1,4 @@
-# Programming teaching notes
+# Programming Teaching Notes (Python)
 
 ## Table of Contents
 1. [Statements and Expressions](#statements-and-expressions)
