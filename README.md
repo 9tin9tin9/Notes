@@ -11,6 +11,8 @@
     2. [Code Blocks in Python](#code-blocks-in-python)
     3. [`if` Statement](#if-statement)
     4. [`while` Statement](#while-statement)
+    5. [`for` Statement](#for-statement)
+    6. [`range()` Function](#range()-function)
 
 ## Statements and Expressions
 
@@ -314,11 +316,11 @@ Now you know what is boolean and code block, let's explain `if` statements
 The syntax of `if` statement is:
 ```
 if <boolean expression>:
-    code block
+    <code block>
 elif <boolean expression>:
-    code block
+    <code block>
 else:
-    code block
+    <code block>
 ```
 
 Let's see an example
@@ -355,3 +357,86 @@ If one of the conditions is satisfied, the rest of the code is not evaludated, i
 ## `while` statement
 
 There are two kinds of loops in Python: `while` loop and `for` loop. `while` loops are usually used to execute a chunck of code until certain conditions are met.
+
+Syntax of `while` loop:
+```
+while <boolean expression>:
+    <block>
+```
+The code block is executed repeatedly as long as the boolean expression returns true. For example:
+```python
+counter = 0
+while counter < 10:
+    print(counter)
+    counter += 1
+```
+which prints
+```
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+> `+=` is the increment operator, which is equivalent to `counter = counter + 1`.
+> You can also have `-=`, `*=`, `/=`, `//=`, `**=`, etc
+
+Note that the boolean expression is evaluated before the code block is executed.
+```python
+while False:
+    print("This line is never printed")
+```
+
+## `for` Statement
+
+`for` statements in Python iterates over the items of any sequence (a list or a string) in order.
+
+The syntax is:
+```
+for <identifier> in <iterable object>:
+    <code block>
+```
+where `<identifier>` is a new variable used to store a **copy** of the current item in the sequence.
+
+For example:
+```python
+animals = ["cat", "dog", "rabbit"]
+for animal in animals:
+    print(animal)
+```
+gives
+```
+cat
+dog
+rabbit
+```
+
+You **cannot** modify the content of the sequence:
+```python
+for animal in animals:
+    animal += "s"
+print(animals)
+```
+gives
+```
+['cat', 'dog', 'rabbit']
+```
+
+Usually you create a new sequence instead of modifying the original one:
+```python
+plural_form = []
+for animal in animals:
+    plural_form.append(animal + "s")
+print(plural_form)
+```
+prints
+```
+['cats', 'dogs', 'rabbits']
+```
+
+## `range()` Function
