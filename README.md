@@ -1,4 +1,4 @@
-# Programming teaching notes
+# Programming Teaching Notes
 
 ## Table of Contents
 1. [Statements and Expressions](#statements-and-expressions)
@@ -353,3 +353,5 @@ If one of the conditions is satisfied, the rest of the code is not evaludated, i
 4. The rest of the if statement won't be executed
 
 ## `while` statement
+
+There are two kinds of loops in Python: `while` loop and `for` loop. `while` loops are usually used to execute a chunck of code until certain conditions are met.
