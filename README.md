@@ -12,7 +12,7 @@
     3. [`if` Statement](#if-statement)
     4. [`while` Statement](#while-statement)
     5. [`for` Statement](#for-statement)
-    6. [`range()` Function](#range()-function)
+    6. [`range()` Function](#range-function)
 
 ## Statements and Expressions
 
@@ -439,4 +439,5 @@ prints
 ['cats', 'dogs', 'rabbits']
 ```
 
+<a name="range-function"></a>
 ## `range()` Function
