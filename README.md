@@ -166,7 +166,7 @@ Two or more strings will be automatically concatenated.
 >>> text
 'Put several strings within parentheses to have them joined together.'
 ```
-Note that the three dots on the second line are printed by the interpreter. Also note that this cannot be applied to variables. To concatenate variables, use the `+` operator.
+Note that this cannot be applied to variables. To concatenate variables, use the `+` operator.
 ```python
 >>> prefix = 'first '
 >>> suffix = 'last'
