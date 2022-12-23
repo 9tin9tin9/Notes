@@ -6,7 +6,7 @@
     1. [Numbers, Operators, Variables](#numbers-operators-variables)
     2. [Strings](#strings)
     3. [Lists](#lists)
-5. [Control Flow](#control-flow)
+3. [Control Flow](#control-flow)
     1. [Boolean Values, Comparison Operators, Boolean Operators](#booleans)
     2. [Code Blocks in Python](#code-blocks-in-python)
     3. [`if` Statement](#if-statement)
@@ -365,13 +365,10 @@ while <boolean expression>:
 ```
 The code block is executed repeatedly as long as the boolean expression returns true. For example:
 ```python
-counter = 0
-while counter < 10:
-    print(counter)
-    counter += 1
-```
-which prints
-```
+>>> counter = 0
+>>> while counter < 10:
+...     print(counter)
+...     counter += 1
 0
 1
 2
@@ -388,8 +385,8 @@ which prints
 
 Note that the boolean expression is evaluated before the code block is executed.
 ```python
-while False:
-    print("This line is never printed")
+>>> while False:
+...     print("This line is never printed")
 ```
 
 ## `for` Statement
@@ -405,12 +402,9 @@ where `<identifier>` is a new variable used to store a **copy** of the current i
 
 For example:
 ```python
-animals = ["cat", "dog", "rabbit"]
-for animal in animals:
-    print(animal)
-```
-gives
-```
+>>> animals = ["cat", "dog", "rabbit"]
+>>> for animal in animals:
+...     print(animal)
 cat
 dog
 rabbit
@@ -418,26 +412,58 @@ rabbit
 
 You **cannot** modify the content of the sequence:
 ```python
-for animal in animals:
-    animal += "s"
-print(animals)
-```
-gives
-```
+>>> for animal in animals:
+...     animal += "s"
+>>> print(animals)
 ['cat', 'dog', 'rabbit']
 ```
 
 Usually you create a new sequence instead of modifying the original one:
 ```python
-plural_form = []
-for animal in animals:
-    plural_form.append(animal + "s")
-print(plural_form)
-```
-prints
-```
+>>> plural_form = []
+>>> for animal in animals:
+...     plural_form.append(animal + "s")
+>>> print(plural_form)
 ['cats', 'dogs', 'rabbits']
 ```
 
 <a name="range-function"></a>
 ## `range()` Function
+
+Remember the `<iterable object>` in `for` statement syntax? The `range()` function returns such object such that the for loop can loop over _a range of numbers_.<br>
+The parameters of `range()` are
+```python
+range(start, stop, step)
+```
+where `stop` and `step` are optional arguments. When only one argument is given, it is treated as `stop` and `start` is implied to be `0`. You will learn more about function parameters later in Function section.
+
+Note that the range generated does not include `stop`
+
+For example:
+```python
+>>> for i in range(5):
+...     print(i)
+0
+1
+2
+3
+4
+```
+
+```python
+>>> for i in range(3, 7):
+...     print(i)
+3
+4
+5
+6
+```
+
+```python
+>>> for i in range(2, 10, 2):
+... 	print(i)
+2
+4
+6
+8
+```
