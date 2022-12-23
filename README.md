@@ -441,7 +441,7 @@ Note that the range generated does not include `stop`
 
 For example:
 ```python
->>> for i in range(5):
+>>> for i in range(5): # range from 0 to 5 (exclusive)
 ...     print(i)
 0
 1
@@ -451,7 +451,7 @@ For example:
 ```
 
 ```python
->>> for i in range(3, 7):
+>>> for i in range(3, 7): # range from 3 to 7 (exclusive)
 ...     print(i)
 3
 4
@@ -460,7 +460,7 @@ For example:
 ```
 
 ```python
->>> for i in range(2, 10, 2):
+>>> for i in range(2, 10, 2): # range from 2 to 10 (exclusive), stepping by 2
 ... 	print(i)
 2
 4
